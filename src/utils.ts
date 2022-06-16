@@ -12,10 +12,22 @@ function throwErrOnInvalidIdxRef(obj: any) {
   return new Proxy(obj, handler);
 }
 
+function bindIntPropLookupsToGetMethod(obj: any) {
+  const handler = {
+    get(target: any, property: any) {
+      if (isWholeNumber(property)) {
+        return target.get(property)
+      }
+      return target[property];
+    }
+  };
+  return new Proxy(obj, handler)
+}
+
 
 function isWholeNumber(value: string) {
   return /^-?\d+$/.test(value);
 }
 
 
-export { throwErrOnInvalidIdxRef }
+export { throwErrOnInvalidIdxRef, bindIntPropLookupsToGetMethod }

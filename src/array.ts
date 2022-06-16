@@ -1,7 +1,7 @@
 // Definition of an array coming from Data Structures & Algorithms Made Easy
 
 /**
- *  Definition: An array is defined as a discrete map to data stored in a contiguous 
+ *  Definition: An array is defined as a discrete map from contiguous integer indices to data stored in a contiguous 
  *  block of memory. To construct an array, a type and number of indices must be provided. 
  *  The constructor can then assign a "base" address in memory and infer the offset from the
  *  data type. The data type can be used to look up each element in constant time by taking 
