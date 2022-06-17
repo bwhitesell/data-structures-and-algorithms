@@ -1,4 +1,4 @@
-import { linkedList } from '../linkedList'
+import { linkedList } from '../structs/linkedList'
 
 
 let ll = new linkedList('hi');

@@ -31,7 +31,6 @@ import { bindIntPropLookupsToGetMethod } from "./utils";
 class listNode {
   value: any;
   node: listNode | null;
-  [key: number]: any;
   
   constructor(value: any) {
     this.value = value;
@@ -42,6 +41,7 @@ class listNode {
 
 class linkedList {
   head: listNode;
+  [key: number]: any;
 
   constructor(value: any) {
     this.head = new listNode(value)
@@ -137,13 +137,13 @@ class linkedList {
   }
 
   newTail(value: any) {
-    const newTailNode = new listNode(data);
+    const newTailNode = new listNode(value);
     const currTailNode = this.getTail();
     currTailNode.node = newTailNode;
   }
 
   newHead(value: any) {
-    const newHead = new listNode(data);
+    const newHead = new listNode(value);
     newHead.node = this.head;
     this.head = newHead;
   }
