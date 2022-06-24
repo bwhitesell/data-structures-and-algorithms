@@ -15,4 +15,3 @@ console.log(ll[1]);
 
 
 console.log(ll[12])
-
